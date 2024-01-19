@@ -55,7 +55,7 @@ const TopPlay = () => {
     dispatch(playPause(true));
   };
   return(
-    <div ref = {divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 x1:max-w-[500px] max-w-full flex flex-col">
+    <div ref = {divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 x1:max-w-[200px] max-w-full flex flex-col">
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Charts</h2>
@@ -63,7 +63,7 @@ const TopPlay = () => {
             <p className="text-gray-300 text-base cursor-pointer">See More</p>
           </Link>
         </div>
-         <div className="empty-4 flex flex-col gap-1">
+         <div className="empty-4 flex flex-col gap-1 max-w-[500px]">
           {topPlays?.map((song,i) =>(
             <TopChartCard 
               key={song.key}
@@ -98,7 +98,7 @@ const TopPlay = () => {
           {topPlays?.map((song,i) => (
             <SwiperSlide 
             key = {song?.key}
-            style={{width: '25%', height:'auto'}}
+            style={{width: '20%', height:'auto'}}
             className="shadow-lg rounded-full animate-sliderright"
             >
               <Link to={`/artists/${song?.artists?.[0]?.adamid || ''  }`}>
