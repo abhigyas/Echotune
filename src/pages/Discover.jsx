@@ -17,15 +17,13 @@ const Discover = () => {
                 <select
                     onChange={() => {}} 
                     value =""
-                    className='bg-black text-grey-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5'
+                    className='bg-[#3b3b3b] text-white-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5'
                 >
                     {genres.map((genre)=> <option key={genre.value} value={genre.value}>{genre.title}</option>)}
                 </select>
             </div>
             <div className='flex flex-wrap sm:justify-start justify-center gap-8'> 
-                {data.tracks?.map((song, i) => (
-            //this is for the other api
-            // {data.result.tracks?.map((song, i) => (
+                {data.result.tracks?.map((song, i) => (
                     <SongCard
                         key={song.key}
                         song = {song}

@@ -4,17 +4,15 @@ export const shazamApi = createApi({
     reducerPath: 'shazamApi',
     baseQuery: fetchBaseQuery({
        //two apis because of monthly hard limit
-        //baseUrl: 'https://shazam-api6.p.rapidapi.com/shazam/',
-        baseUrl: 'https://shazam.p.rapidapi.com',
+        baseUrl: 'https://shazam-api6.p.rapidapi.com/shazam/',
         prepareHeaders:(headers) => {
-            headers.set('X-RapidAPI-Key', 'cd796eaf58msh57e5eedeb2f72c6p1e7869jsne37fb7ca224c');
+            headers.set('X-RapidAPI-Key', '861e75ac51msh136447bf360b4e6p1e0e8ejsn66698c226405');
             
             return headers;
         },
     }),
         endpoints:(builder) =>({
-           //getTopCharts: builder.query({query: () => '/top_tracks_country?country_code=US&limit=50'})
-            getTopCharts: builder.query({query: () => '/charts/track'})
+           getTopCharts: builder.query({query: () => '/top_tracks_country?country_code=US&limit=50'})
         })
     }); 
 
