@@ -1,12 +1,12 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 
 import playerReducer from './features/playerSlice';
-import { shazamApi } from './services/shazam';
+import { shazamMusicApi } from './services/shazam';
 
 export const store = configureStore({
   reducer: {
-    [shazamApi.reducerPath]:shazamApi.reducer,
+    [shazamMusicApi.reducerPath]:shazamMusicApi.reducer,
     player: playerReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(shazamApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(shazamMusicApi.middleware),
 });
