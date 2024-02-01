@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 const DetailsHeader = ({ imgUrl, artistData, songData }) => {
+  console.log(imgUrl);
+  console.log(artistData);
+  console.log(songData);
   return (
     <div className="relative w-full flex flex-col">
       <div className="w-full bg-gradient-to-1 from-transparent to-black sm:h-48 h-48"/>
